@@ -1,0 +1,25 @@
+{% extends 'Layout.twig' %}
+
+{% block title %}
+        Authentication
+{% endblock %}
+
+{% block content %}
+        <form id="form_auth" action="/auth" method="POST">
+            <label for="name">{{s_key}}:</label>
+            <input type="text" id="name" name="name" value="" />
+    
+            <label for="salt">{{s_another_key}}:</label>
+            <input type="text" id="salt" name="salt" value="" />
+    
+            <input type="submit" />
+        </form>
+{% endblock %}
+
+{% block scripts %}
+        {% include 'Scripts/Jquery.twig' %}
+        {% include 'Scripts/Jquery/jLabel.twig' %}
+        <script type="text/javascript">
+            $('#form_auth').jLabel();
+        </script>
+{% endblock %}

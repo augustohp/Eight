@@ -1,0 +1,13 @@
+{% include 'Layout.twig' %}
+
+{% block content %}
+<form action="/text/{{text_id}}" method="POST">
+    <label for="title">{{s_title}}:</label>
+    <input type="text" id="title" name="title" value="{{text_title}}" />
+    
+    <label for="content">{{s_content}}:</label>
+    <textarea id="content" name="content">{{text_content}}</textarea>
+    
+    <input type="submit" value="{{s_save}}" />
+</form>
+{% endblock %}

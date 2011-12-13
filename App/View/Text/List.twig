@@ -1,0 +1,14 @@
+{% include 'Layout.twig' %}
+
+{% block title %}Your Ideas{% endblock %}
+
+{% block content %}
+	<a href="/text">Create new Entry</a>
+    <ul>
+    {% for text in texts %}
+        <li> <a href="/text/{{ text.id }}">{{ text.title|default(s_no_title)|striptags }}</a> </li>
+    {% else %}
+        <li> {{ s_no_item }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

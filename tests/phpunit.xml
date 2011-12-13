@@ -1,0 +1,32 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true"
+         verbose="true"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
+         
+         <testsuites>
+            <testsuite name="Eight PHPT Test Suite">
+                <directory sufix=".phpt">./library/Eight</directory>
+            </testsuite>
+             <testsuite name="Eight PHPUnit Test Suite">
+                  <directory suffix=".php">./library/Eight</directory>
+              </testsuite>
+         </testsuites>
+         
+         <filter>
+             <whitelist addUncoveredFilesFromWhitelist="true">
+                 <directory suffix=".php">../library/Eight</directory>
+             </whitelist>
+         </filter>
+
+         <logging>
+             <log type="coverage-html" target="/tmp/report" charset="UTF-8" />
+         </logging>
+</phpunit>
