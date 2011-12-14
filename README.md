@@ -4,6 +4,7 @@ Sample application to integrate different tools. Some wanted features:
 
 * Privacy is key
 * Expose an API and consume it
+* Multi language
 
 ## Tools Used
 

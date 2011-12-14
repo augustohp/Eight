@@ -104,7 +104,7 @@ class Application
      * @param   string[optional]  $configFile 
      * @return  Eight\Application
      */
-    protected function parseConfiguration($configFile=null)
+    public function parseConfiguration($configFile=null)
     {
         set_include_path($this->getPath('../').PATH_SEPARATOR.get_include_path());
         $configFile   = $configFile ?: $this->getPath('config.ini') ;
